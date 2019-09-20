@@ -1,6 +1,7 @@
-	import std.stdio;
-import std.algorithm;
+import std.stdio;
+import std.algorithm.comparison: among, equal;
 import std.random;
+import std.range: iota;
 
 /*
 Returns what character to print depending
@@ -81,6 +82,13 @@ int check_win(int[] a)
 }
 
 
+int get_random()
+{
+    auto rnd = Random(unpredictableSeed);
+    auto i = uniform(0, 8, rnd);
+    return i;
+}
+
 /*
 Entry point
 */
@@ -118,12 +126,23 @@ void main(string[] args)
 			return;
 		if (check_tie(a))
 			return;
-		int i = 0;
+        int computer_idx;
+        while (1)
+        {
+            computer_idx = get_random();
+            if (a[computer_idx] is 0)
+            {
+                a[computer_idx] = -1;
+                break;
+            }
+        }
+		/* int i = 0;
 		while (a[i] != 0)
 		{
 			i++;
 		}
 		a[i] = -1;
+        */
 		if (check_win(a))
 			return;
 		if (check_tie(a))
