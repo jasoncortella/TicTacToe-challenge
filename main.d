@@ -95,6 +95,10 @@ int get_random()
     return i;
 }
 
+
+/*
+Prompt for single player mode, will be competing againts randomized computer positions
+*/
 int player1(int[] a)
 {
 	while (1)
