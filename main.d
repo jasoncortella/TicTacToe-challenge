@@ -35,6 +35,29 @@ void print_board(int[] a)
 }
 
 /*
+ */
+int check_tie(int[] a)
+{
+	int i = 0, flag = 0;
+
+	while (i < 9)
+	{
+		if (a[i] != 0)
+			flag = 1;
+		else
+			flag = 0;
+		++i;
+	}
+	if (flag is 1)
+	{
+		print_board(a);
+		writeln("It's a tie!");
+		return (1);
+	}
+	return 0;
+}
+
+/*
 Entry point
 */
 void main(string[] args)
@@ -67,12 +90,16 @@ void main(string[] args)
 		}
 		writeln("You chose ", intline);
 		a[intline - 1] = 1;
+		if (check_tie(a))
+			return;
 		int i = 0;
 		while (a[i] != 0)
 		{
 			i++;
 		}
 		a[i] = -1;
+		if (check_tie(a))
+			return;
 		break;
 	}
     }
