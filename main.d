@@ -104,6 +104,11 @@ void main(string[] args)
 	while (1)
 	{
 		line = readln();
+		if (line == "q\n" || line == "quit\n")
+		{
+		    writeln("goodbye!! :(");
+		    return;
+		}
 		if (line.length != 2)
 		{
 			 writeln("Invalid input. Input must be 1-9");
@@ -126,28 +131,21 @@ void main(string[] args)
 			return;
 		if (check_tie(a))
 			return;
-        int computer_idx;
-        while (1)
-        {
-            computer_idx = get_random();
-            if (a[computer_idx] is 0)
-            {
-                a[computer_idx] = -1;
-                break;
-            }
-        }
-		/* int i = 0;
-		while (a[i] != 0)
-		{
-			i++;
-		}
-		a[i] = -1;
-        */
-		if (check_win(a))
-			return;
-		if (check_tie(a))
-			return;
-		break;
+        	int computer_idx;
+        	while (1)
+      		{
+		    computer_idx = get_random();
+                    if (a[computer_idx] is 0)
+                    {
+                        a[computer_idx] = -1;
+                        break;
+                    }
+                }
+	        if (check_win(a))
+	   	    return;
+	        if (check_tie(a))
+		    return;
+	        break;
 	}
     }
 }
