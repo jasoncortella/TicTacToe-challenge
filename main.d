@@ -1,5 +1,6 @@
-import std.stdio;
+	import std.stdio;
 import std.algorithm;
+import std.random;
 
 /*
 Returns what character to print depending
@@ -7,7 +8,7 @@ on the value in the result array at index idx
 */
 char what(int[] a, int idx)
 {
-    if (a[idx] is 0) 
+    if (a[idx] is 0)
     {
         return (cast(char)(idx + 1 + 48));
     } else if (a[idx] is 1)
@@ -38,7 +39,41 @@ Entry point
 */
 void main(string[] args)
 {
-    int[9] a = [ 0,0,0,1,0,-1,0,0,0 ];
+    int[9] a = [ 0,0,0,0,0,0,0,0,0 ];
 
-    print_board(a);
+    while (1)
+    {
+	print_board(a);
+	string line;
+	writeln("Enter a board position to make a move");
+	while (1)
+	{
+		line = readln();
+		if (line.length != 2)
+		{
+			 writeln("Input must be 1-9");
+			 continue;
+		}
+		int intline = cast(int)line[0] - 48;
+		if (intline < 1 || intline > 9)
+		{
+			 writeln("Input must be 1-9");
+			 continue;
+		}
+		if (a[intline - 1] != 0)
+		{
+			 writeln("Must select empty tile");
+			 continue;
+		}
+		writeln("You chose ", intline);
+		a[intline - 1] = 1;
+		int i = 0;
+		while (a[i] != 0)
+		{
+			i++;
+		}
+		a[i] = -1;
+		break;
+	}
+    }
 }
