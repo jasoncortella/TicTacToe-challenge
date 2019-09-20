@@ -45,7 +45,7 @@ int check_tie(int[] a)
 		if (a[i] == 0)
 		   return 0;
 	print_board(a);
-	writeln("It's a tie!");
+	writeln("The board is full, the game is a tie!");
 	return (1);
 }
 
@@ -68,13 +68,13 @@ int check_win(int[] a)
 		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == 3)
 		{
 			print_board(a);
-			writeln("X wins");
+			writeln("Congratulations player X, you win!");
 			return(1);
 		}
 		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3)
 		{
 			print_board(a);
-			writeln("O wins");
+			writeln("Awwww, better luck next time :(");
 			return(1);
 		}
 	}
@@ -100,24 +100,24 @@ void main(string[] args)
     {
 	print_board(a);
 	string line;
-	writeln("Enter a board position to make a move");
+	writeln("Hello Player X. Enter a board position 1-9 to make your move");
 	while (1)
 	{
 		line = readln();
 		if (line.length != 2)
 		{
-			 writeln("Input must be 1-9");
+			 writeln("Invalid input. Input must be 1-9");
 			 continue;
 		}
 		int intline = cast(int)line[0] - 48;
 		if (intline < 1 || intline > 9)
 		{
-			 writeln("Input must be 1-9");
+			 writeln("Invalid input. Input must be 1-9");
 			 continue;
 		}
 		if (a[intline - 1] != 0)
 		{
-			 writeln("Must select empty tile");
+			 writeln("Invalid input. Must select empty tile");
 			 continue;
 		}
 		writeln("You chose ", intline);
