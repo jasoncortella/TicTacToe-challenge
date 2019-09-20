@@ -53,7 +53,7 @@ int check_tie(int[] a)
 Checks if the board has three X's in a row, or three O's in a row (win)
 Returns 1 if there is a win condition, 0 if not
  */
-int check_win(int[] a)
+int check_win(int[] a, int p2)
 {
 	int[][] b = [[0,1,2],
 	    	     [3,4,5],
@@ -71,11 +71,17 @@ int check_win(int[] a)
 			writeln("Congratulations player X, you win!");
 			return(1);
 		}
-		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3)
+		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3 && p2 == 0)
 		{
 			print_board(a);
 			writeln("Awwww, better luck next time :(");
 			return(1);
+		}
+		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3 && p2 == 1)
+		{
+			print_board(a);
+                        writeln("Congratulations player O, you win!");
+                        return(1);
 		}
 	}
 	return (0);
@@ -120,7 +126,7 @@ int player1(int[] a)
 		}
 		writeln("You chose ", intline);
 		a[intline - 1] = 1;
-		if (check_win(a))
+		if (check_win(a, 0))
 			return 1;
 		if (check_tie(a))
 			return 1;
@@ -134,7 +140,7 @@ int player1(int[] a)
                         break;
                     }
                 }
-	        if (check_win(a))
+	        if (check_win(a, 0))
 	   	    return 1;
 	        if (check_tie(a))
 		    return 1;
@@ -142,8 +148,57 @@ int player1(int[] a)
     return 1;
 }
 
+/*
+Prompt 2 player mode if 2 is inputed that allows 2 players to play against each other.
+*/
 int player2(int[] a)
 {
+	int p2 = 1;
+
+	while (1)
+	{
+	        print_board(a);
+                string line;
+		if (p2 == 1)
+                	writeln("Hello Player X. Enter a board position 1-9 to make your move");
+		else
+			writeln("Hello Player O. Enter a board position 1-9 to make your move");
+		line = readln();
+		if (line == "q\n" || line == "quit\n")
+		{
+		    writeln("goodbye!! :(");
+		    return 1;
+		}
+		if (line.length != 2)
+		{
+			 writeln("Invalid input. Input must be 1-9");
+			 continue;
+		}
+		int intline = cast(int)line[0] - 48;
+		if (intline < 1 || intline > 9)
+		{
+			 writeln("Invalid input. Input must be 1-9");
+			 continue;
+		}
+		if (a[intline - 1] != 0)
+		{
+			 writeln("Invalid input. Must select empty tile");
+			 continue;
+		}
+		writeln("You chose ", intline);
+		if (p2 == 1)
+			a[intline - 1] = 1;
+		else
+			a[intline - 1] = -1;
+		if (check_win(a, 1))
+			return 1;
+		if (check_tie(a))
+			return 1;
+		if (p2 == 1)
+			p2 = 2;
+		else
+			p2 = 1;
+	}
     return 1;
 }
 
