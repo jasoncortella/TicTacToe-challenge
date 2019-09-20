@@ -77,9 +77,7 @@
 
 * A tie between Machine and Player 1
 
-	<p align="center">
-            <img src="https://imgur.com/Z0sffq3">
-        </p>
+	<blockquote class="imgur-embed-pub" lang="en" data-id="Z0sffq3"><a href="https://imgur.com/Z0sffq3">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 * 
 
