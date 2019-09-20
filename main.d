@@ -35,27 +35,51 @@ void print_board(int[] a)
 }
 
 /*
+Checks if array a is full (the game is a tie)
+Returns 1 if full, 0 if not full
  */
 int check_tie(int[] a)
 {
-	int i = 0, flag = 0;
-
-	while (i < 9)
-	{
-		if (a[i] != 0)
-			flag = 1;
-		else
-			flag = 0;
-		++i;
-	}
-	if (flag is 1)
-	{
-		print_board(a);
-		writeln("It's a tie!");
-		return (1);
-	}
-	return 0;
+	for (int i = 0; i < 9; i++)
+		if (a[i] == 0)
+		   return 0;
+	print_board(a);
+	writeln("It's a tie!");
+	return (1);
 }
+
+/*
+Checks if the board has three X's in a row, or three O's in a row (win)
+Returns 1 if there is a win condition, 0 if not
+ */
+int check_win(int[] a)
+{
+	int[][] b = [[0,1,2],
+	    	     [3,4,5],
+	    	     [6,7,8],
+	    	     [0,3,6],
+	    	     [1,4,7],
+	    	     [2,5,8],
+	    	     [0,4,8],
+	    	     [2,4,6]];
+	for (int i = 0; i < 8; i++)
+	{
+		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == 3)
+		{
+			print_board(a);
+			writeln("X wins");
+			return(1);
+		}
+		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3)
+		{
+			print_board(a);
+			writeln("O wins");
+			return(1);
+		}
+	}
+	return (0);
+}
+
 
 /*
 Entry point
@@ -90,6 +114,8 @@ void main(string[] args)
 		}
 		writeln("You chose ", intline);
 		a[intline - 1] = 1;
+		if (check_win(a))
+			return;
 		if (check_tie(a))
 			return;
 		int i = 0;
@@ -98,6 +124,8 @@ void main(string[] args)
 			i++;
 		}
 		a[i] = -1;
+		if (check_win(a))
+			return;
 		if (check_tie(a))
 			return;
 		break;
