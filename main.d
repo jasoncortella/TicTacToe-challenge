@@ -89,25 +89,18 @@ int get_random()
     return i;
 }
 
-/*
-Entry point
-*/
-void main(string[] args)
+int player1(int[] a)
 {
-    int[9] a = [ 0,0,0,0,0,0,0,0,0 ];
-
-    while (1)
-    {
-	print_board(a);
-	string line;
-	writeln("Hello Player X. Enter a board position 1-9 to make your move");
 	while (1)
 	{
+	        print_board(a);
+                string line;
+                writeln("Hello Player X. Enter a board position 1-9 to make your move");
 		line = readln();
 		if (line == "q\n" || line == "quit\n")
 		{
 		    writeln("goodbye!! :(");
-		    return;
+		    return 1;
 		}
 		if (line.length != 2)
 		{
@@ -128,9 +121,9 @@ void main(string[] args)
 		writeln("You chose ", intline);
 		a[intline - 1] = 1;
 		if (check_win(a))
-			return;
+			return 1;
 		if (check_tie(a))
-			return;
+			return 1;
         	int computer_idx;
         	while (1)
       		{
@@ -142,10 +135,42 @@ void main(string[] args)
                     }
                 }
 	        if (check_win(a))
-	   	    return;
+	   	    return 1;
 	        if (check_tie(a))
-		    return;
-	        break;
+		    return 1;
+	}
+    return 1;
+}
+
+int player2(int[] a)
+{
+    return 1;
+}
+
+
+/*
+Entry point
+*/
+void main(string[] args)
+{
+    int[9] a = [ 0,0,0,0,0,0,0,0,0 ];
+    string line;
+
+    writeln("Welcome to tic tac toe!");
+    while (1)
+    {
+        writeln("Choose how many players will be playing?");
+	write("Enter either 1 or 2: ");
+	line = readln();
+	if (line == "1\n")
+	{
+	     if (player1(a) == 1)
+	         break;
+	}
+	else if (line == "2\n")
+	{
+	    if (player2(a) == 1)
+		break;
 	}
     }
 }
