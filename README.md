@@ -10,15 +10,21 @@
 
 ### Description
 
-* Tic-Tac-Toe is a computer generated game that can be played from the command line of your Virtual environment with three options available;
+* Tic-Tac-Toe is a computer generated game that can be played from the command line of your Virtual environment with two options available;
 
 <ul>
-<li>The three game player mode options are...</li>
+<li>The two game player mode options are...</li>
 <ul>
 <li>Human(Player 1) Vs Human(Player 2)</li>
 <li>Human Vs Machine</li>
 </ul>
 </ul>
+
+
+* The way to win the game is by matching 3 consecutive markers of either "O" and "X", diagonally, horizontally or diagonally
+
+![Game Pattern (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png)
+
 
 ### Installation of D-Programming Language in Linux-Ubuntu
 
@@ -41,45 +47,45 @@
 * Run the command "./main"
 
 * Your Tic-Tac-Toe will now startup and you should have the following image of a Tic-Tac-Toe Human vs Machine;
-	
-	[Imgur](https://imgur.com/Z0sffq3)
 
 
-* The Human (Player 1 or 2) Symbol is a letter "X" while the Machine player Symbol is a letter "O"
+![Welcome Page (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Welcome.png)
 
-        <p align="center">
-            <img src="https://imgur.com/WYO3srJ.png">
-        </p>
+
+* The Human (Player 1) Symbol is a letter "X" while the Machine or Player 2 Symbol is a letter "O"
+
+
+![Game Symbols (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Symbols.png)     
 
 
 * When the human (Player 1) selects a number, The machine will select a Random whole number between 1 - 9
 
-        <p align="center">
-            <img src="https://imgur.com/6fC10ko">
-        </p>
-	
-	![alt text](https://imgur.com/6fC10ko "Logo Title Text 1")
 
-
+![Game Selection Symbols (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png) 
+  
 
 * The human and Machine will continue playing until there is either a win or a draw
 
 * A Win by the Machine
 
-        <p align="center">
-            <img src="https://imgur.com/U5r42v1.png">
-        </p>
+
+![Machine Wins (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Machine_wins.png) 
+
 
 * A win by the Player 1
 
-	<p align="center">
-            <img src="https://imgur.com/lcWh9yC">
-        </p>
+
+![Player Wins (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png)
 
 
 * A tie between Machine and Player 1
 
-	<blockquote class="imgur-embed-pub" lang="en" data-id="Z0sffq3"><a href="https://imgur.com/Z0sffq3">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
-* 
+![Tie between Machine Vs Player (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Tie.png)
+
+
+* Error message when you enter 
+
+
+![Error Message (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Error_message.png)
 
