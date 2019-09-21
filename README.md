@@ -63,7 +63,7 @@
 * A Win by the Machine
 
         <p align="center">
-            <img src="https://imgur.com/U5r42v1">
+            <img src="https://imgur.com/U5r42v1.png">
         </p>
 
 * A win by the Player 1
