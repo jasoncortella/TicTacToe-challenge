@@ -1,10 +1,10 @@
 # Hack day: TicTacToe challenge
 
-                        | | (_)    | |           | |            
-                        | |_ _  ___| |_ __ _  ___| |_ ___   ___ 
-                        | __| |/ __| __/ _` |/ __| __/ _ \ / _ \
-                        | |_| | (__| || (_| | (__| || (_) |  __/
-                         \__|_|\___|\__\__,_|\___|\__\___/ \___|
+                            | | (_)    | |           | |            
+                            | |_ _  ___| |_ __ _  ___| |_ ___   ___ 
+                            | __| |/ __| __/ _` |/ __| __/ _ \ / _ \
+                            | |_| | (__| || (_| | (__| || (_) |  __/
+                              \__|_|\___|\__\__,_|\___|\__\___/ \___|
 
 
 
@@ -52,39 +52,39 @@
 ![Welcome Page (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Welcome.png)
 
 
-* The Human (Player 1) Symbol is a letter "X" while the Machine or Player 2 Symbol is a letter "O"
+The Human (Player 1) Symbol is a letter "X" while the Machine or Player 2 Symbol is a letter "O".
 
 
 ![Game Symbols (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Symbols.png)     
 
 
-* When the human (Player 1) selects a number, The machine will select a Random whole number between 1 - 9
+When the human (Player 1) selects a number, The machine will select a Random whole number between 1 - 9
 
 
 ![Game Selection Symbols (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png) 
   
 
-* The human and Machine will continue playing until there is either a win or a draw
+The human and Machine will continue playing until there is either a win or a draw
 
-* A Win by the Machine
+A Win by the Machine:
 
 
 ![Machine Wins (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Machine_wins.png) 
 
 
-* A win by the Player 1
+A win by the Player 1:
 
 
 ![Player Wins (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png)
 
 
-* A tie between Machine and Player 1
+A tie between Machine and Player 1:
 
 
 ![Tie between Machine Vs Player (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Tie.png)
 
 
-* Error message when you enter 
+Error message when you enter a non-empty position:
 
 
 ![Error Message (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Error_message.png)
