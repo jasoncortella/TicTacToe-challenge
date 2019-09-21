@@ -4,13 +4,13 @@
                               | |_ _  ___| |_ __ _  ___| |_ ___   ___ 
                               | __| |/ __| __/ _` |/ __| __/ _ \ / _ \
                               | |_| | (__| || (_| | (__| || (_) |  __/
-                              \__|_|\___|\__\__,_|\___|\__\___/ \___|
+                               \__|_|\___|\__\__,_|\___|\__\___/ \___|
 
 
 
 ## Description
 
-* Tic-Tac-Toe is a computer generated game that can be played from the command line of your Virtual environment with two options available;
+* Tic-Tac-Toe is a computer generated game that can be played from the command line of your Virtual environment with two options available:
 
 <ul>
 <li>The two game player mode options are...</li>
@@ -20,13 +20,14 @@
 </ul>
 </ul>
 
+* This game was coded in the D programming language. [Learn more](https://dlang.org/).
 
 * To win the game, the player needs to be matching 3 consecutive positions, vertically, horizontally or diagonally
 
 ![Game Pattern (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png)
 
 
-## Installation of D-Programming Language in Linux-Ubuntu
+## Installation and compilation of D-Programming Language in Linux-Ubuntu
 
 
 * ```curl -fsS https://dlang.org/install.sh | bash -s dmd```
