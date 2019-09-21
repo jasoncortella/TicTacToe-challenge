@@ -1,14 +1,14 @@
-# README for Tic-Tac-Toe
+# Hack day: TicTacToe challenge
 
-        | | (_)    | |           | |            
-        | |_ _  ___| |_ __ _  ___| |_ ___   ___ 
-        | __| |/ __| __/ _` |/ __| __/ _ \ / _ \
-        | |_| | (__| || (_| | (__| || (_) |  __/
-         \__|_|\___|\__\__,_|\___|\__\___/ \___|
+                        | | (_)    | |           | |            
+                        | |_ _  ___| |_ __ _  ___| |_ ___   ___ 
+                        | __| |/ __| __/ _` |/ __| __/ _ \ / _ \
+                        | |_| | (__| || (_| | (__| || (_) |  __/
+                         \__|_|\___|\__\__,_|\___|\__\___/ \___|
 
 
 
-### Description
+## Description
 
 * Tic-Tac-Toe is a computer generated game that can be played from the command line of your Virtual environment with two options available;
 
@@ -21,12 +21,12 @@
 </ul>
 
 
-* The way to win the game is by matching 3 consecutive markers of either "O" and "X", diagonally, horizontally or diagonally
+* To win the game, the player needs to be matching 3 consecutive positions, vertically, horizontally or diagonally
 
 ![Game Pattern (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Player_win.png)
 
 
-### Installation of D-Programming Language in Linux-Ubuntu
+## Installation of D-Programming Language in Linux-Ubuntu
 
 
 * ```curl -fsS https://dlang.org/install.sh | bash -s dmd```
@@ -40,7 +40,7 @@
 * To run the program You need to type ```./main``` main being the executable file
 
 
-### How to Play
+## How to Play
 
 * We assume that you have compiled the main file in your machine
 
@@ -93,9 +93,14 @@
 ## Authors
 
 Sneha Dasa Lakshminath - [sneha.dasasneha@gmail.com]
+
 Jason Cortella - [jason.r.cortella@gmail.com]
+
 George Solorio - [george_solorio@yahoo.com]
+
 Laura Roudge - [laura.derohan@gmail.com]
+
 Jun Zhu - [jzhu965601@gmail.com]
+
 Koome Mwiti - [koome@neverest.co.ke]
 
