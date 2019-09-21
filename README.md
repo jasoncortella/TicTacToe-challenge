@@ -41,10 +41,8 @@
 * Run the command "./main"
 
 * Your Tic-Tac-Toe will now startup and you should have the following image of a Tic-Tac-Toe Human vs Machine;
-
-        <p align="center">
-            <img src="https://imgur.com/WpVhwyx">
-        </p>
+	
+	[Imgur](https://imgur.com/Z0sffq3)
 
 
 * The Human (Player 1 or 2) Symbol is a letter "X" while the Machine player Symbol is a letter "O"
