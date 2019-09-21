@@ -28,11 +28,15 @@ depending on the state of the game
 */
 void print_board(int[] a)
 {
-    writeln(what(a, 0), "|", what(a, 1), "|", what(a, 2));
-    writeln("-+-+-");
-    writeln(what(a, 3), "|", what(a, 4), "|", what(a, 5));
-    writeln("-+-+-");
-    writeln(what(a, 6), "|", what(a, 7), "|", what(a, 8));
+    // writeln("\n");
+    writeln("-------");
+    writeln("|", what(a, 0), "|", what(a, 1), "|", what(a, 2), "|");
+    writeln("--+-+--");
+    writeln("|", what(a, 3), "|", what(a, 4), "|", what(a, 5), "|");
+    writeln("--+-+--");
+    writeln("|", what(a, 6), "|", what(a, 7), "|", what(a, 8), "|");
+    writeln("-------");
+    // writeln("\n");
 }
 
 /*
@@ -45,7 +49,7 @@ int check_tie(int[] a)
 		if (a[i] == 0)
 		   return 0;
 	print_board(a);
-	writeln("The board is full, the game is a tie!");
+	writeln("\nThe board is full, the game is a tie!\n");
 	return (1);
 }
 
@@ -68,26 +72,28 @@ int check_win(int[] a, int p2)
 		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == 3)
 		{
 			print_board(a);
-			writeln("Congratulations player X, you win!");
+			writeln("\nCongratulations player X, you win!\n");
 			return(1);
 		}
 		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3 && p2 == 0)
 		{
 			print_board(a);
-			writeln("Awwww, better luck next time :(");
+			writeln("\nAwwww, better luck next time :(\n");
 			return(1);
 		}
 		if (a[b[i][0]] + a[b[i][1]] + a[b[i][2]] == -3 && p2 == 1)
 		{
 			print_board(a);
-                        writeln("Congratulations player O, you win!");
-                        return(1);
+            writeln("\nCongratulations player O, you win!\n");
+            return(1);
 		}
 	}
 	return (0);
 }
 
-
+/*
+Returns a random position for the computer to place its ‘O’
+*/
 int get_random()
 {
     auto rnd = Random(unpredictableSeed);
@@ -95,37 +101,36 @@ int get_random()
     return i;
 }
 
-
 /*
-Prompt for single player mode, will be competing againts randomized computer positions
+Prompts for single player mode, will be competing againts randomized computer positions
 */
 int player1(int[] a)
 {
 	while (1)
 	{
-	        print_board(a);
-                string line;
-                writeln("Hello Player X. Enter a board position 1-9 to make your move");
+	    print_board(a);
+        string line;
+        writeln("\nPlayer X turn. Enter a board position 1-9 to make your move:");
 		line = readln();
 		if (line == "q\n" || line == "quit\n")
 		{
-		    writeln("goodbye!! :(");
+		    writeln("\nGoodbye! :(\n");
 		    return 1;
 		}
 		if (line.length != 2)
 		{
-			 writeln("Invalid input. Input must be 1-9");
+			 writeln("Invalid input. Input must be 1-9.");
 			 continue;
 		}
 		int intline = cast(int)line[0] - 48;
 		if (intline < 1 || intline > 9)
 		{
-			 writeln("Invalid input. Input must be 1-9");
+			 writeln("Invalid input. Input must be 1-9.");
 			 continue;
 		}
 		if (a[intline - 1] != 0)
 		{
-			 writeln("Invalid input. Must select empty tile");
+			 writeln("Invalid input. Must select an empty tile.");
 			 continue;
 		}
 		writeln("You chose ", intline);
@@ -134,19 +139,19 @@ int player1(int[] a)
 			return 1;
 		if (check_tie(a))
 			return 1;
-        	int computer_idx;
-        	while (1)
-      		{
+        int computer_idx;
+        while (1)
+      	{
 		    computer_idx = get_random();
-                    if (a[computer_idx] is 0)
-                    {
-                        a[computer_idx] = -1;
-                        break;
-                    }
+            if (a[computer_idx] is 0)
+            {
+                a[computer_idx] = -1;
+                break;
                 }
-	        if (check_win(a, 0))
+        }
+	    if (check_win(a, 0))
 	   	    return 1;
-	        if (check_tie(a))
+	    if (check_tie(a))
 		    return 1;
 	}
     return 1;
@@ -161,32 +166,32 @@ int player2(int[] a)
 
 	while (1)
 	{
-	        print_board(a);
-                string line;
+	    print_board(a);
+        string line;
 		if (p2 == 1)
-                	writeln("Hello Player X. Enter a board position 1-9 to make your move");
+            writeln("\nPlayer X turn. Enter a board position 1-9 to make your move:");
 		else
-			writeln("Hello Player O. Enter a board position 1-9 to make your move");
+			writeln("\nPlayer O turn. Enter a board position 1-9 to make your move:");
 		line = readln();
 		if (line == "q\n" || line == "quit\n")
 		{
-		    writeln("goodbye!! :(");
+		    writeln("\nGoodbye! :(\n");
 		    return 1;
 		}
 		if (line.length != 2)
 		{
-			 writeln("Invalid input. Input must be 1-9");
+			 writeln("Invalid input. Input must be 1-9.");
 			 continue;
 		}
 		int intline = cast(int)line[0] - 48;
 		if (intline < 1 || intline > 9)
 		{
-			 writeln("Invalid input. Input must be 1-9");
+			 writeln("Invalid input. Input must be 1-9.");
 			 continue;
 		}
 		if (a[intline - 1] != 0)
 		{
-			 writeln("Invalid input. Must select empty tile");
+			 writeln("Invalid input. Must select empty tile.");
 			 continue;
 		}
 		writeln("You chose ", intline);
@@ -206,7 +211,6 @@ int player2(int[] a)
     return 1;
 }
 
-
 /*
 Entry point
 */
@@ -215,21 +219,21 @@ void main(string[] args)
     int[9] a = [ 0,0,0,0,0,0,0,0,0 ];
     string line;
 
-    writeln("Welcome to tic tac toe!");
+    writeln("\nWelcome to tic tac toe!\n");
     while (1)
     {
-        writeln("Choose how many players will be playing?");
-	write("Enter either 1 or 2: ");
-	line = readln();
-	if (line == "1\n")
-	{
-	     if (player1(a) == 1)
-	         break;
-	}
-	else if (line == "2\n")
-	{
-	    if (player2(a) == 1)
-		break;
-	}
+        writeln("Choose how many players will be playing.");
+        write("Enter either 1 or 2: ");
+        line = readln();
+        if (line == "1\n")
+        {
+             if (player1(a) == 1)
+                 break;
+        }
+        else if (line == "2\n")
+        {
+            if (player2(a) == 1)
+            break;
+        }
     }
 }
