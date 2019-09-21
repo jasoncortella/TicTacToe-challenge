@@ -29,22 +29,22 @@
 ### Installation of D-Programming Language in Linux-Ubuntu
 
 
-* curl -fsS https://dlang.org/install.sh | bash -s dmd
+* ```curl -fsS https://dlang.org/install.sh | bash -s dmd```
 
-* To activate your Virtual Environment source ~/dlang/dmd-2.088.0/activate
+* To activate your Virtual Environment ```source ~/dlang/dmd-2.088.0/activate```
 
-* To deactivate the environment - Type "deactivate"
+* To deactivate the environment - Type ```deactivate```
 
-* To compile your program e.g main.d type "dmd main.d"
+* To compile your program e.g main.d type ```dmd main.d```
 
-* To run the program You need to type "./main main being the executable file
+* To run the program You need to type ```./main``` main being the executable file
 
 
 ### How to Play
 
 * We assume that you have compiled the main file in your machine
 
-* Run the command "./main"
+* Run the command ```./main```
 
 * Your Tic-Tac-Toe will now startup and you should have the following image of a Tic-Tac-Toe Human vs Machine;
 
@@ -88,4 +88,14 @@
 
 
 ![Error Message (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Error_message.png)
+
+
+## Authors
+
+Sneha Dasa Lakshminath - [sneha.dasasneha@gmail.com]
+Jason Cortella - [jason.r.cortella@gmail.com]
+George Solorio - [george_solorio@yahoo.com]
+Laura Roudge - [laura.derohan@gmail.com]
+Jun Zhu - [jzhu965601@gmail.com]
+Koome Mwiti - [koome@neverest.co.ke]
 
