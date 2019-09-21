@@ -146,13 +146,14 @@ int player1(int[] a)
             if (a[computer_idx] is 0)
             {
                 a[computer_idx] = -1;
+		writeln("Computer chose ", computer_idx + 1);
                 break;
-                }
+            }
         }
-	    if (check_win(a, 0))
-	   	    return 1;
-	    if (check_tie(a))
-		    return 1;
+	if (check_win(a, 0))
+	    return 1;
+	if (check_tie(a))
+	    return 1;
 	}
     return 1;
 }
@@ -235,5 +236,11 @@ void main(string[] args)
             if (player2(a) == 1)
             break;
         }
+	else
+	{
+	    writeln("************************");
+	    writeln("Please enter valid input");
+	    writeln("************************");
+	}
     }
 }
