@@ -57,6 +57,10 @@
         <p align="center">
             <img src="https://imgur.com/6fC10ko">
         </p>
+	
+	![alt text](https://imgur.com/6fC10ko "Logo Title Text 1")
+
+
 
 * The human and Machine will continue playing until there is either a win or a draw
 
