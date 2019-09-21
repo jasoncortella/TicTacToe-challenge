@@ -85,10 +85,16 @@ A tie between Player 1 and Player 2:
 ![Tie between Machine Vs Player (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Tie.png)
 
 
-Error message when you enter a non-empty position:
+Error message when you enter a non-empty position or an unknown character:
 
 
 ![Error Message (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Error_message.png)
+
+
+Exiting the game can be done by entering "q" or "quit":
+
+![Error Message (courtesy Team Big Ds ](https://github.com/jasoncortella/TicTacToe-challenge/blob/master/Images/Goodbye.png)
+
 
 
 ## Authors
