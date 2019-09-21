@@ -48,7 +48,7 @@
 * The Human (Player 1 or 2) Symbol is a letter "X" while the Machine player Symbol is a letter "O"
 
         <p align="center">
-            <img src="https://imgur.com/WYO3srJ">
+            <img src="https://imgur.com/WYO3srJ.png">
         </p>
 
 
