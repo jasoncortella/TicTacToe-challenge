@@ -1,2 +1,5 @@
 test.o
+test
+test.d
 main
+main.o
